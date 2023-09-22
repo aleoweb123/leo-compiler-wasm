@@ -55,8 +55,13 @@ class Mycomponent extends HTMLElement {
             alert("cant read program name! only a-z,0-9,_ are allowed")
             return
         }
-
-        this.setAttribute("mytext", m.compile(this.source, program_name))
+        try { 
+            this.setAttribute("mytext",m.compile(this.source, program_name) )
+        } catch (error: any) {
+            console.log(error);
+            this.setAttribute("mytext",error)
+        }
+       
     }
 
     attributeChangedCallback(attrName: any, _oldVal: any, _newVal: any) {
