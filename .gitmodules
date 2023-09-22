@@ -1,0 +1,3 @@
+[submodule "leo"]
+	path = leo
+	url = git@github.com:AleoHQ/leo.git

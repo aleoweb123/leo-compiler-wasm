@@ -1,0 +1,21 @@
+{
+  "name": "fil-chrome-extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "rsw": "rsw"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^4.3.9",
+    "vite-plugin-rsw": "^2.0.11",
+    "vite-plugin-wasm-pack": "^0.1.12"
+  },
+  "dependencies": {
+    "env": "^0.0.2"
+  }
+}

@@ -1,0 +1,44 @@
+[workspace]
+resolver = "2"
+members = [
+  "rust/compiler",
+  "leo/compiler/ast",
+  "leo/compiler/compiler",
+  "leo/compiler/parser",
+  "leo/compiler/passes",
+  "leo/compiler/span",
+  "leo/docs/grammar",
+  "leo/errors",
+  "leo/leo/package",
+  "leo/tests/test-framework"
+]
+
+[workspace.dependencies.snarkvm]
+git = "https://github.com/AleoHQ/snarkVM.git"
+branch = "testnet3"
+
+[workspace.dependencies.snarkvm-console]
+git = "https://github.com/AleoHQ/snarkVM.git"
+branch = "testnet3"
+features = ["wasm"]
+
+[workspace.dependencies.leo-ast]
+path = "./leo/compiler/ast"
+
+[workspace.dependencies.leo-compiler]
+path = "./leo/compiler/compiler"
+
+[workspace.dependencies.leo-errors]
+path = "./leo/errors"
+
+[workspace.dependencies.leo-passes]
+path = "./leo/compiler/passes"
+
+[workspace.dependencies.leo-package]
+path = "./leo/leo/package"
+
+[workspace.dependencies.leo-parser]
+path = "./leo/compiler/parser"
+
+[workspace.dependencies.leo-span]
+path = "./leo/compiler/span"
